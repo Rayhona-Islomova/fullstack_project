@@ -1,0 +1,396 @@
+html{
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.line{
+    height: 3px;
+    width: 100%;
+    background-color: rgb(234, 234, 234);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f0f0;
+    -webkit-font-smoothing:antialiased;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+ul li {
+
+    list-style: none;
+    justify-content: center;
+    align-items: start;
+
+}
+
+.container-fluid {
+    background-color: rgb(248, 248, 248);;
+    max-width: 100%;
+    padding: 0;
+}
+
+.top-header {
+    display: inline;
+    background: #f8f9fa;
+    padding: 10px 40px;
+    font-size: 14px;
+    flex-direction: row;
+    text-align: center;
+    
+}
+
+.top-content{
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-around; 
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #17a2b8;
+    font-size: 18px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: left;
+    gap: 10px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+}
+
+.contact-item i {
+    justify-content: space-evenly;
+    color: #17a2b8;
+}
+
+.contact-label {
+    justify-content: space-evenly;
+    font-weight: bold;
+    color: #484545;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding-left: 12.1%;
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: #514f4f;
+    text-decoration: none;
+    padding: 10px;
+}
+
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #17a2b8;
+}
+
+
+@media (max-width: 992px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
+.carousel-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    background: rgba(43, 42, 42, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide.active .text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.indicators {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.dot.active {
+    opacity: 1;
+    background: red;
+}
+.about_us_section {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    gap: 70px;
+    padding:0 12%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+.about-us{
+    height: 50vh;
+    width: 70%;
+    
+}
+
+.about-us p{
+    line-height: 2;
+    font-size: 18px;
+}
+
+.joy{
+    height: 30px;
+}
+
+.our-mission{
+    height: 60vh;
+    background-color: white;
+    text-align: center;
+    
+}
+
+.our-mission h1{
+    padding-top: 50px;
+    line-height: 2;
+}
+
+.about-section {
+    width: 100%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+p {
+    line-height: 2;
+}
+
+.underline {
+    width: 50px;
+    height:2px;
+    background-color: #26B5D9;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    gap: 10;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #080808;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    position: relative;
+    bottom: -40px;
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #26B5D9;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.read-more:hover {
+    background-color: #0e0f0f;
+}
+.row {
+    --bs-gutter-x: 30px;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y)* -1);
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+}
+.section {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    padding:0 12%;
+   color: white;
+    align-items: center;
+    flex-direction: row;
+    background-color:black;
+}
+.our_services1{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    gap: 70px;
+    padding:0 12%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background-color: whitesmoke;
+}
+
+.gallery_section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 70px;
+    padding:0 12%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+.linear-icon-pills{
+    background-color: #0e0f0f;
+}
+.pricing_section{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    gap: 70px;
+    padding:0 12%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background-color: antiquewhite;
+}
+.meet_our_team{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    gap: 70px;
+    padding:0 12%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+
+}
+.Blog{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    gap: 70px;
+    padding:0 12%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background-color: aliceblue;
+}
+.doktor_qiz{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    gap: 70px;
+    padding:0 12%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}

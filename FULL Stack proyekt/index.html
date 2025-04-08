@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedClinic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="top-header">
+      <div class="top-content container d-flex justify-content-between">
+        <span>High-quality health care</span>
+        <div>
+          <a href="#" class="text-decoration-none text-info">Sign In</a> |
+          <a href="#" class="text-decoration-none text-info">Create an Account</a>
+          <span class="social-icons">
+            <div>
+              <img src="image/social.png" alt="">
+
+            </div>
+            <div>
+              <img src="image/google-plus.png" alt="">
+
+            </div>
+            <div>
+              <img src="image/vimeo.png" alt="">
+
+            </div>
+            <div>
+              <img src="image/" alt="">
+            </div>
+            <div>
+              <img src="image/pinterest.png" alt="">
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="container main-header">
+      <div class="logo">
+        <img src="image/logo medical.png" alt="">
+      </div>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <img src="image/location.png" alt="">
+            <span class="contact-label">Address:</span>
+            <p>4578 Marmora Road, Glasgow, D04 89GR</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <img src="image/telephone.png" alt="">
+
+            <span class="contact-label">Phones:</span>
+            <p>(800) 123-0045 ; (800) 123-0045</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-clock"></i>
+          <div>
+            <img src="image/clock.png" alt="">
+            <span class="contact-label">We are open:</span>
+            <p>Mn-Fr: 10 am-8 pm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <nav class="navbar navbar-expand-lg bg-white border-top">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">SERVICES</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">GALLERY</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">PRICING</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">TEAM</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">BLOG</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CONTACTS</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="carousel">
+        <div class="slide active">
+          <img src="image/medical slayd1.png" style="height: 100vh;" alt="Slide 1">
+          <div class="text">dsfghmn,fdhghmj,</div>
+        </div>
+        <div class="slide">
+          <img src="image/medical slayd2.png" style="height: 100vh;" alt="Slide 2">
+          <div class="text"></div>
+        </div>
+        <div class="slide">
+          <img src="image/image3.png" style="height: 100vh;" alt="Slide 3">
+          <div class="text"></div>
+        </div>
+      </div>
+
+      <div class="indicators">
+        <span class="dot" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+      </div>
+    </section>
+
+    <script>
+      let currentIndex = 0;
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      const carousel = document.querySelector('.carousel');
+
+      function updateCarousel() {
+        const offset = -currentIndex * 100;
+        carousel.style.transform = `translateX(${offset}%)`;
+
+        slides.forEach((slide, index) => {
+          slide.classList.toggle('active', index === currentIndex);
+        });
+
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[currentIndex].classList.add('active');
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+      }
+
+      function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        setInterval(nextSlide, 10000); // Har 3 soniyada slayd o‘zgaradi
+      });
+
+    </script>
+
+    <section id="about_us_section" class="about_us_section">
+
+      <div class="about-us">
+        <h2>ABOUT US</h2><br>
+        <p class="underline"></p>
+        <br><br>
+        <p>
+          MedClinic centers on diagnosing and treating patients of all ages, while emphasizing
+          preventative medicine and the overall health and wellness of its patients. The clinic
+          features state-of-the-art equipment and trained staff that will optimize the care of each patient.
+          We understand that there are many factors that can affect health, including exercise, diet, and heredity.
+        </p>
+        <div class="joy"></div>
+        <p>
+          We are committed to providing the highest quality patient care. Our dedication to excellence,
+          compassion, and innovation is rooted in our devotion to the art and science of healing, which
+          supports every aspect of our mission.
+        </p>
+        <br><br><br>
+        <a href="#" class="read-more">READ MORE</a>
+      </div>
+
+      <div class="our-mission" style="width: 30%;">
+
+        <img src="image/section1.png" alt="">
+        <h1>OUR MISSION</h1>
+        <p>We aim to provide compassionate,<br> comprehensive, community health care <br>that exceeds our customer's
+          expectations <br>and needs.</p>
+        <br>
+        <a href="#" class="read-more">READ MORE</a>
+      </div>
+      <div class="our-mission">
+        <img src="image/section2.png" alt="">
+        <h1>OUR VISION</h1>
+        <p>
+          The vision of MedClinic is to be the medical services <br> provider that people can trust and rely on <br>
+          regardless of their budget.</p>
+        <br>
+        <a href="#" class="read-more">READ MORE</a>
+
+      </div>
+
+
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+          <div class="col-xl-8 text-xl-start">
+            <h4><span class="fw-bold">MedClinic</span><span class="fw-normal">is Your #1 Medical Services
+                Provider</span></h4>
+            <p>At our clinic, you can get a full range of health care services for you and your family.</p>
+          </div>
+          <div><a href="#" class="read-more">READ MORE</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="our_services1">
+      <div class="our_services">
+        <h1>Our Services</h1>
+        <p>Our patients have access to a wide range of services right here on-site, as well as off-site through
+          partnerships the Clinic has established. Besides offering great health care, our staff also provides
+          high-quality diagnostics using the cutting-edge medical equipment. Feel free to learn more about our services
+          below.</p>
+      </div>
+      <div class="general_surgery">
+        <span class="icon linear-icon-pills"></span>
+
+        <h1>General Surgery</h1>
+        <p>Our general surgeons focus on a variety of problems that can be treated with surgery.</p>
+      </div>
+      <div class="ophthalmology_procedures">
+        <h1>Ophthalmology Procedures</h1>
+        <p>MedClinic’s ophthalmologists provide high-quality eye health procedures to our patients.</p>
+
+      </div>
+      <div class="outpatient_services">
+        <h1>Outpatient Services</h1>
+        <p>Our outpatient services cover the needs of patients who require follow-up care & check-ups.</p>
+
+      </div>
+      <div class="radiology_and_mammograms">
+        <h1>Radiology and Mammograms</h1>
+        <p>We provide a wide variety of radiology services including X-ray and mammography.</p>
+      </div>
+      <div class="respiratory_therapy">
+        <h1>Respiratory Therapy</h1>
+        <p>Our respiratory therapy services help patients breathe easy whether they're babies or adults.</p>
+      </div>
+      <div class="laboratory_services">
+        <h1>Laboratory Services</h1>
+        <p>We take great pride in providing the highest quality of laboratory services to our patients.</p>
+      </div>
+    </section>
+    <section class="gallery_section">
+      
+      <div class="all">
+        <h1>GALLERY</h1>                                      
+        <h1>All</h1>
+        <img src="image/portfolio1.1.png" alt="">
+        <img src="image/portfolio1.2.png" alt="">
+        <img src="image/portfolio1.3.png" alt="">
+        <img src="image/portfolio1.4.png" alt="">
+        <img src="image/portfolio1.5.png" alt="">
+        <img src="image/portfolio1.6.png" alt="">
+        <img src="image/portfolio1,7.png" alt="">
+        <img src="image/portfolio1.8.png" alt="">
+        <img src="image/portfolio1.9.png" alt="">
+      </div>
+      <div class="health_care">
+        <h1>Health care</h1>
+
+      </div>
+      <div class="diagnostics">
+        <h1>Diagnostics</h1>
+
+      </div>
+
+    </section>
+    <div class="linear-icon-pills">
+      <img src="image/rengen.png" alt="">
+
+    </div>
+    <section class="pricing_section">
+      <div>
+        <h1>PRICING</h1>
+      </div>
+      <div>
+        <h1>Available options</h1>
+        <p>Diagnostic Services <br>
+          Number of Patients <br>
+          Dental Services <br>
+          Additional Services</p>
+      </div>
+      <div>
+        <h1>Basic</h1>
+        <p>$32.89/monthly</p>
+        <p>Laboratory Analysis
+          2 Patients
+          Ophthalmology</p>
+        <div><a href="#" class="read-more">BUY NOW!</a></div>
+      </div>
+      <div>
+        <h1>Standard</h1>
+        <p>$76.89 /monthly</p>
+        <p>Ultrasound
+          5 Patients
+          Surgery</p>
+        <div><a href="#" class="read-more">BUY NOW!</a></div>
+      </div>
+      <div>
+        <h1>Premium</h1>
+        <p>$89.89/monthly</p>
+        <p>X-ray
+          10 Patients
+          Manual Therapy</p>
+        <div><a href="#" class="read-more">BUY NOW!</a></div>
+      </div>
+
+    </section>
+    <section class="meet_our_team">
+      <div>
+        <h1>Meet Our Team</h1>
+
+      </div>
+      
+      <div>
+        <img src="image/our_team1.png" alt="">
+        <h1>Dr. Brian King</h1>
+        <p>Head Doctor, Neurology</p>
+      </div>
+      <div>
+        <img src="image/our_team2.png" alt="">
+        <h1>Dr. Amanda Smith</h1>
+        <p>Diagnostics</p>
+      </div>
+      <div>
+        <img src="image/our_team3.png" alt="">
+        <h1>Dr. George Nelson</h1>
+        <p>Ophthalmology</p>
+      </div>
+      <div>
+        <img src="image/our_team4.png" alt="">
+        <h1>Dr. Sam Wilson</h1>
+        <p>Traumatology</p>
+      </div>
+    </section>
+    <div>
+      <img src="image/dori.png" alt="">
+    </div>
+    <section class="Blog">
+      <div>
+        <h1>Recent News</h1>
+      </div>
+      <div>
+        <img src="image/blog1.png" alt="">
+        <h1>The Importance of Annual X-Rays</h1>
+        <p>Jan.20, 2021by Brian Williamson</p>
+        <p>Annual X-ray diagnostics allows preventing diseases at early stages and help doctors detect health issues.
+          Today, we’ll learn...</p>
+      </div>
+      <div>
+        <img src="image/blog2.png" alt="">
+        <h1>Working in Emergency Medicine</h1>
+        <p>Jan.20, 2021by Brian Williamson</p>
+        <p>Emergency medicine is closely connected with people interaction as well as other stress-related factors but
+          still...</p>
+      </div>
+      <div>
+        <img src="image/blog3.png" alt="">
+        <h1>How a Doctor Can Help You</h1>
+        <p>Jan.20, 2021by Brian Williamson</p>
+        <p>Your local doctor can help you in lots of ways. In this post, we’ll talk about the reasons for visiting your
+          doctor regularly as well as...</p>
+      </div>
+    </section>
+    <section class="doktor_qiz">
+      <div class="matn_section">
+      <div>
+        <h1>WHAT ARE THE ADVANTAGES OF PURCHASING A WEBSITE TEMPLATE?</h1>
+        <p>The major advantage is price: You get a high quality design for just $20-$70. You don’t have to hire a web
+          designer or web design studio. Second advantage is time frame: It usually takes 5-15 days for a good designer
+          to produce a web page of such quality.</p>
+      </div>
+      <div>
+        <h1>DO YOU PROVIDE ANY SCRIPTS WITH YOUR TEMPLATES OR COULD YOU DO SOME CUSTOM PROGRAMMING?</h1>
+        <p>Our templates do not include any additional scripts. Newsletter subscriptions, search fields, forums, image
+          galleries (in HTML versions of Flash products) are inactive. Basic scripts can be easily added at zemez.io If
+          you are not sure that the element you’re interested in is active please contact our Support Chat for
+          clarification.</p>
+      </div>
+      <div>
+        <h1>IN WHAT FORMATS ARE YOUR TEMPLATES AVAILABLE?</h1>
+        <p>Website templates are available in Photoshop and HTML formats. Fonts are included with Photoshop file. In
+          most templates HTML is compatible with Adobe® Dreamweaver® and Microsoft Frontpage®.</p>
+      </div>
+    </div>
+      <div>
+        <img src="image/doktor_qiz.png" alt="">
+      </div>
+    </section>
+
+
+  </div>
+</body>
+
+</html>
